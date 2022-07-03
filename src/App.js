@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Pressure from "./Components/PressuresList";
+import Hights from "./Components/HightsList";
 function App() {
+
+  // Permet de rafraichir la page toutezs les 60secondes pour afficher la dernière donnée.
+  setTimeout(function () {
+    window.reload();
+  }, 60000);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    {/* Permet d'afficher les 2 composants */}
+      <Pressure />
+      <Hights />
+      <meta http-equiv="refresh" content="60" />
     </div>
   );
 }
